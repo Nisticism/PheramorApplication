@@ -1,0 +1,7 @@
+<resources>
+    <string name="appName">Pheramor UI Registration</string>
+    <string name="newUserMessage">Please enter your email to begin registration:</string>
+    <string name="beginRegistrationButton">Submit</string>
+    <string name="confirmEmail">Please confirm email</string>
+    <string name="beginRegistration">Begin Registration</string>
+</resources>

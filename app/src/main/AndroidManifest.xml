@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.nistic.pheramoruiregistration">
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/appName"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+        </activity>
+        <activity
+            android:name=".Email"
+            android:label="Pheramor Registration">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Password"
+            android:label="Password">
+        </activity>
+        <activity
+            android:name=".FullNameZipHeight"
+            android:label="Name, Zipcode, Height">
+        </activity>
+        <activity
+            android:name=".GenderDOB"
+            android:label="Gender, Date of Birth">
+        </activity>
+        <activity
+            android:name=".GenderPrefAgeRange"
+            android:label="Gender Preference, Age Range">
+        </activity>
+        <activity
+            android:name=".RaceReligion"
+            android:label="Race, Religion">
+        </activity>
+        <activity
+            android:name=".ProfilePicture"
+            android:label="Profile Picture">
+        </activity>
+        <activity
+            android:name=".Summary"
+            android:label="Summary">
+        </activity>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="nistic.android.fileproviderx"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"></meta-data>
+            <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES"
+                android:value="ocr"/>
+        </provider>
+    </application>
+
+</manifest>
